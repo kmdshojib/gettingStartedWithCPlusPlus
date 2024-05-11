@@ -1,26 +1,39 @@
-#include <iostream>;
+// for starndered template
+#include<bits/stdc++.h>
 using namespace std;
 
-typedef struct employee
+class TestClass
 {
-    int eid;
-    string fullName;
-    float salary;
+public:
+    void testMethod();
 };
-void employeeFunc()
+void TestClass::testMethod()
 {
-    employee rafi;
-    rafi.eid = 20106;
-    rafi.fullName = "Rafi Hasan";
-    rafi.salary = 308980;
-
-    cout << "Employee Details : "
-         << "\n"
-         << "Name: " << rafi.fullName << "\n"
-         << "Salary: " << rafi.salary;
+    cout << "Testing methods" << endl;
 }
 int main()
 {
-    employeeFunc();
+    TestClass testObj;
+    testObj.testMethod();
+    vector<int> testArr = {1, 2, 3, 4, 5, 6, 7};
+    testArr.emplace_back(9);
+    int length = testArr.size();
+
+    cout << testArr.back() << endl;
+
+    // for (int i = 0; i < length; i++) {
+    //     cout << "index : " << i << " " << testArr[i] << endl;
+    // }
+
+    // for (auto i = testArr.begin(); i != testArr.end(); i++)
+    // {
+    //     cout << *(i) << endl;
+    // }
+
+    for (auto i : testArr)
+    {
+        cout << i << endl;
+    }
+
     return 0;
 }
